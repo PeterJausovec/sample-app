@@ -18,6 +18,14 @@ app.get('/', function (req, res) {
     res.sendFile(__dirname + '/public/index.html');
 });
 
+app.get('/myroute', function (req, res) {
+    res.redirect('/redirect/routename');
+});
+
+app.get('/redirect/routename', function (req, res) {
+    res.send('REDIRECT!!');
+});
+
 // api ------------------------------------------------------------
 app.get('/api', function (req, res) {
     // Connect to redis container using environment variable
