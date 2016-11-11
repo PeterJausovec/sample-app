@@ -9,7 +9,6 @@ services:
             - "80"
         depends_on:
             - service-b
-        user: peterj
 
     service-b:
         build: ./service-b
