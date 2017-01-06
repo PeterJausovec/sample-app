@@ -11,8 +11,6 @@ services:
             - "8080:80"
         depends_on:
             - service-b
-        labels:
-            com.microsoft.acs.dcos.marathon.vhost: peterjacs3agents.westus.cloudapp.azure.com
 
     service-b:
         build: ./service-b
